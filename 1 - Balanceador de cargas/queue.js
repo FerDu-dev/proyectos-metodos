@@ -1,3 +1,4 @@
+// Clase Queue los métodos tradicionales
 class Queue{
 
     constructor(){
