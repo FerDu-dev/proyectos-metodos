@@ -18,22 +18,23 @@ Monorepositorio multipaquete creado con NODE JS. En donde, cada proyecto es un p
 * Git clone https://github.com/FerDu-dev/proyectos-metodos.git
 * cd proyectos-metodos
 
-### Executing program
+# Executing program
 
-# Scripts de ejecución
+### Scripts de ejecución
 
 * npm run ev1: Ejecuta el proyecto de la evaluación 1.
 
 
-## Authors
+## Integrantes
 
-Contributors names and contact info
+- Fernando Duno [FerDu-dev](https://github.com/FerDu-dev)
+- Santiago Briceño [SantiagoBriceño](https://github.com/SantiagoBriceno)
+- Sofia Tamaris [SofiaTamaris]()
+- Andres Pausín [AndresPausin]
+- José Miguel Quintero [JoseMQ]
 
 ex. Dominique Pizzie  
 ex. [@DomPizzie](https://twitter.com/dompizzie)
 
 
 
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
