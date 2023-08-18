@@ -27,14 +27,12 @@ Monorepositorio multipaquete creado con NODE JS. En donde, cada proyecto es un p
 
 ## Integrantes
 
-- Fernando Duno [FerDu-dev](https://github.com/FerDu-dev)
+- Fernando Duno [FernandoD](https://github.com/FerDu-dev)
 - Santiago Briceño [SantiagoBriceño](https://github.com/SantiagoBriceno)
-- Sofia Tamaris [SofiaTamaris]()
-- Andres Pausín [AndresPausin]
-- José Miguel Quintero [JoseMQ]
+- Sofia Tamaris [SofiaTamaris](https://github.com/Sofiatamaris)
+- Andres Pausín [AndresPausin](https://github.com/andrespausin)
+- José Miguel Quintero [JoseMQ](https://github.com/Josemq24)
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
 
 
 
