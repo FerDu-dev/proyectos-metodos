@@ -1,4 +1,5 @@
-// Clase Queue los métodos tradicionales
+// Clase Queue con los métodos tradicionales
+// Exportamos la clase Queue para su uso en el ejercicio
 export default class Queue {
   constructor () {
     this.items = []
