@@ -1,5 +1,5 @@
 // Clase Queue los métodos tradicionales
-class Queue{
+export default class Queue{
 
     constructor(){
     this.items = [];
@@ -7,6 +7,10 @@ class Queue{
     
     enqueue(element) {
         this.items.push(element)
+    }
+
+    isEmpty() {
+        return this.items.length === 0;
     }
 
     dequeue(){
