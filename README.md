@@ -5,6 +5,8 @@ Proyectos de la materia Métodos Cuantitativos de la universidad José Antonio P
 ## Descripción del repositorio
 
 Monorepositorio multipaquete creado con NODE JS. En donde, cada proyecto es un paquete independiente.
+ 
+evaluación nro. 1 - Balanceador de cargas [Documentación_1](https://github.com/FerDu-dev/proyectos-metodos/blob/master/1-Balanceador-de-cargas/mocks/Balanceador%20de%20cargas.pdf)
 
 ## Getting Started
 
