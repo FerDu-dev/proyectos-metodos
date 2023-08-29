@@ -39,7 +39,8 @@ class Server {
   }
 
   processRequest (request) {
-    this.load++
+    //this.load += request.data.id;
+    this.load ++
     this.requestsProcessed++
   }
 }
@@ -75,6 +76,11 @@ loadBalancer.addRequest(new Request(generateRandomData()))
 loadBalancer.addRequest(new Request(generateRandomData()))
 loadBalancer.addRequest(new Request(generateRandomData()))
 loadBalancer.addRequest(new Request(generateRandomData()))
+loadBalancer.addRequest(new Request(generateRandomData()))
+loadBalancer.addRequest(new Request(generateRandomData()))
+loadBalancer.addRequest(new Request(generateRandomData()))
+loadBalancer.addRequest(new Request(generateRandomData()))
+loadBalancer.addRequest(new Request(generateRandomData()))
 // Procesar las solicitudes en la cola
 loadBalancer.processRequests()
 
@@ -83,6 +89,6 @@ for (const server of servers) {
   console.log(`Server ${server.id} processed ${server.requestsProcessed} requests`)
 }
 
-const requestData = generateRandomData()
-const request = new Request(requestData)
-loadBalancer.addRequest(request)
+// const requestData = generateRandomData()
+// const request = new Request(requestData)
+// loadBalancer.addRequest(request)
