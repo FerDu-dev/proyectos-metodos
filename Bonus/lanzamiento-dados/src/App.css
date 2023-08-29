@@ -1,42 +1,48 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
-@keyframes logo-spin {
-  from {
+button {
+  width: 80px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.dado {
+  width: 200px;
+  height: 200px;
+  border: 10px solid rgb(38, 95, 250);
+  border-radius: 10%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+}
+
+.dado.true {
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+
+  100% {
+    transform: rotate(3600deg);
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
