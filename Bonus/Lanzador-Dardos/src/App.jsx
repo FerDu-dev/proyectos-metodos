@@ -13,7 +13,7 @@ function App () {
     <>
       <section className='container'>
         <h1>Lanzamiento de Dardos</h1>
-        <Tablero x={x} y={y} />
+        <Tablero x={x} y={y} inicio={inicio} />
 
         <div className='container-table dardo'>
           {inicio && <h2 className=''>{`${turno ? JUGADORES[0] : JUGADORES[1]}, acabas de hacer ${puntActual}`}</h2>}
