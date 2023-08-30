@@ -5,7 +5,7 @@ export function Tablero ({ x, y }) {
         <div className='table-dos'>
           <div className='table-tres'>
             <div className='table-cuatro'>
-              <div className='pointer1' style={{ top: `${y + 7}px`, left: `${x + 7}px` }} />
+              <div className='pointer1' style={{ top: `${y + 6}px`, left: `${x + 6}px` }} />
             </div>
           </div>
         </div>
