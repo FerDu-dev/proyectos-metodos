@@ -100,8 +100,8 @@ button:focus-visible {
   align-items: center;
   background-color: #f9f9f9;
   border: #fa0000 solid 10px;
-  width: 50%;
-  height: 100%;
+  width: 340px;
+  height: 340px;
   border-radius: 100%;
 }
 

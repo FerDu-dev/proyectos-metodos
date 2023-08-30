@@ -1,12 +1,29 @@
-const radioDiana = 170;
+const radioDiana = 180;
+const radioDos = 127;
+const radioTres = 65.5;
+const centro = 15.9;
 
 function calcularPuntaje(x, y) {
+    let value = 0
     const distanciaAlCentro = Math.sqrt(x * x + y * y);
     if (distanciaAlCentro > radioDiana) {
-        return 0;
+        value = 0;
     } else {
-        return Math.max(0, 100 - Math.floor(distanciaAlCentro / 10) * 10);
+        if(distanciaAlCentro <= radioDiana){
+            value = 10;
+            if(distanciaAlCentro <= radioDos){
+                value = 40;
+                if(distanciaAlCentro <= radioTres){
+                    value = 70;
+                    if(distanciaAlCentro <= centro){
+                        value = 100;
+                    }
+
+                }
+            }
+        }
     }
+    return value;
 }
 
 export function simularLanzamiento() {
