@@ -1,29 +1,59 @@
-import { controlador } from '../services/Controllers'
-//Controlador es una instacia de la clase controladorCompuesto el cual ya se encuentra incializada y lista para trabajar
-// tiene los semaforos con los tiempos de espera necesarios para no realizar colisiones en ninguno de sus puntos mientras
-// se siga el siguiente ciclo.
-// 1) Semáforos 2 y 4 permiten paso de frente o cruce hacia la derecha
-// 2) Semáforos 1 y 3 permiten paso de frente o cruce hacia la derecha
-// 3) Semáforos 2 y 4 solo pueden cruzar hacia la calle de la izquierda
-// 4) Semáforos 1 y 3 solo pueden cruzar hacia la calle de la izquierda
-// (Se repite el ciclo)
+import Semaforo from './Semaforo';
+import Carro from './Carro';
 
-// falta colocar los 4 semáforos en la intercepción, tal como aparece en el canva y hacer el renderizado condicional de los colores
-export default function CuatroSemaforos () {
-    return (
-        <div className="container">
-            <div className='container-block'>
+export default function CuatroSemaforos({ simulacionEnEjecucion }) {
+  const ciclo = {
+    verde: 17,
+    amarillo: 3,
+    rojo: 20
+  };
 
-            </div>
-            <div className="container-block"> 
-            
-            </div>
-            <div className="container-block">
+  const ruta1 = [
+    { x: 0, y: 0 },
+    { x: 10, y: 0 },
+    { x: 20, y: 0 },
+    { x: 100, y: 100 }
+  ];
 
-            </div>
-            <div className="container-block">
+  const ruta2 = [
+    { x: 100, y: 0 },
+    { x: 90, y: 0 },
+    { x: 80, y: 0 },
+    { x: 0, y: 100 }
+  ];
 
-            </div>
+  const ruta3 = [
+    { x: 100, y: 100 },
+    { x: 90, y: 90 },
+    { x: 80, y: 80 },
+    { x: 0, y: 0 }
+  ];
+
+  const ruta4 = [
+    { x: 0, y: 100 },
+    { x: 10, y: 90 },
+    { x: 20, y: 80 },
+    { x: 100, y: 0 }
+  ];
+
+  return (
+    <div className="container">
+      <Carro ruta={ruta1} velocidad={1} simulacionEnEjecucion={simulacionEnEjecucion} />
+      <Carro ruta={ruta2} velocidad={2} simulacionEnEjecucion={simulacionEnEjecucion} />
+      <Carro ruta={ruta3} velocidad={1.5} simulacionEnEjecucion={simulacionEnEjecucion} />
+      <Carro ruta={ruta4} velocidad={2.5} simulacionEnEjecucion={simulacionEnEjecucion} />
+      <div className="container-block">
+        <Semaforo ciclo={ciclo} simulacionEnEjecucion={simulacionEnEjecucion} />
       </div>
-    )
+      <div className="container-block">
+        <Semaforo ciclo={ciclo} simulacionEnEjecucion={simulacionEnEjecucion} />
+      </div>
+      <div className="container-block">
+        <Semaforo ciclo={ciclo} simulacionEnEjecucion={simulacionEnEjecucion} />
+      </div>
+      <div className="container-block">
+        <Semaforo ciclo={ciclo} simulacionEnEjecucion={simulacionEnEjecucion} />
+      </div>
+    </div>
+  );
 }
