@@ -1,6 +1,7 @@
 :root {
   --green-bg-color: #77dd77;
   --white-bd-color: rgb(211, 203, 203);
+  --animation-time: 3s;
 }
 
 .main-container {
@@ -60,8 +61,10 @@
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   border-bottom: 1px dashed var(--white-bd-color);
+  align-items: center;
+  flex-direction: row-reverse;
 }
 
 .subcalle2 {
@@ -69,6 +72,7 @@
   height: 100%;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .calle-2 {
@@ -78,19 +82,392 @@
 }
 
 .calle-2 .subcalle1 {
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: flex-start;
   border-bottom: none;
+
 }
 
 .calle-2 .subcalle2 {
   border-left: 1px dashed var(--white-bd-color);
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-end;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+}
+
+.semaforo {
+  display: flex;
+  flex-direction: column;
+}
+
+.auto {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.auto.vertical-1 {
+
+  animation: move1 var(--animation-time) linear;
+}
+
+.auto.vertical-2 {
+  animation: move2 var(--animation-time) linear;
+}
+
+.auto.vertical-3 {
+  animation: move3 var(--animation-time) linear;
+}
+
+.auto.vertical-4 {
+  animation: move4 var(--animation-time) linear;
+}
+
+.auto.vertical-5 {
+  animation: move5 var(--animation-time) linear;
+}
+
+.auto.vertical-6 {
+  animation: move6 var(--animation-time) linear;
+}
+
+.auto.horizontal-1 {
+  animation: move7 var(--animation-time) linear;
+}
+
+.auto.horizontal-2 {
+  animation: move8 var(--animation-time) linear;
+}
+
+.auto.horizontal-3 {
+  animation: move9 var(--animation-time) linear;
+}
+
+.auto.horizontal-4 {
+  animation: move10 var(--animation-time) linear;
+}
+
+.auto.horizontal-5 {
+  animation: move11 var(--animation-time) linear;
+}
+
+.auto.horizontal-6 {
+  animation: move12 var(--animation-time) linear;
+}
+
+/* ANIMACIONES VERTICALES ASCENDENTES*/
+@keyframes move1 {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: 38%;
+    left: 0%;
+  }
+
+  100% {
+    bottom: 38%;
+    left: 415%;
+  }
 
 
 }
+
+@keyframes move2 {
+  0% {
+    bottom: 0%;
+  }
+
+  50% {
+    bottom: 45%;
+  }
+
+  100% {
+    bottom: 90%;
+  }
+}
+
+@keyframes move3 {
+  0% {
+    bottom: 0%;
+  }
+
+  40% {
+    bottom: 38%;
+    right: 0%;
+  }
+
+  50% {
+    bottom: 42%
+  }
+
+  55% {
+    bottom: 44%;
+    right: 20%;
+  }
+
+  60% {
+    bottom: 46%;
+    right: 40%;
+  }
+
+  65% {
+    bottom: 48%;
+    right: 60%;
+  }
+
+  70% {
+    bottom: 48%;
+    right: 80%;
+  }
+
+  75% {
+    bottom: 48%;
+    right: 100%;
+  }
+
+  100% {
+    bottom: 48%;
+    right: 480%;
+  }
+
+}
+
+/* MOVIMIENTOS VERTICALES DESCENDENTES */
+@keyframes move4 {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: 38%;
+    right: 0%;
+  }
+
+  100% {
+    top: 38%;
+    right: 415%;
+  }
+}
+
+@keyframes move5 {
+  0% {
+    top: 0%;
+  }
+
+  50% {
+    top: 45%;
+  }
+
+  100% {
+    top: 90%;
+  }
+}
+
+@keyframes move6 {
+  0% {
+    top: 0%;
+  }
+
+  40% {
+    top: 38%;
+    left: 0%;
+  }
+
+  50% {
+    top: 42%
+  }
+
+  55% {
+    top: 44%;
+    left: 20%;
+  }
+
+  60% {
+    top: 46%;
+    left: 40%;
+  }
+
+  65% {
+    top: 48%;
+    left: 60%;
+  }
+
+  70% {
+    top: 48%;
+    left: 80%;
+  }
+
+  75% {
+    top: 48%;
+    left: 100%;
+  }
+
+  100% {
+    top: 48%;
+    left: 480%;
+  }
+
+}
+
+/* MOVIMIENTOS HORIZONTALES DERECHA A IZQUIERDA */
+
+@keyframes move7 {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 38%;
+    top: 0%;
+  }
+
+  100% {
+    left: 38%;
+    top: 415%;
+  }
+}
+
+@keyframes move8 {
+  0% {
+    left: 0%;
+  }
+
+  50% {
+    left: 45%;
+  }
+
+  100% {
+    left: 90%;
+  }
+}
+
+@keyframes move9 {
+  0% {
+    left: 0%;
+  }
+
+  40% {
+    left: 38%;
+    bottom: 0%;
+  }
+
+  50% {
+    left: 42%
+  }
+
+  55% {
+    left: 44%;
+    bottom: 20%;
+  }
+
+  60% {
+    left: 46%;
+    bottom: 40%;
+  }
+
+  65% {
+    left: 48%;
+    bottom: 60%;
+  }
+
+  70% {
+    left: 48%;
+    bottom: 80%;
+  }
+
+  75% {
+    left: 48%;
+    bottom: 100%;
+  }
+
+  100% {
+    left: 48%;
+    bottom: 480%;
+  }
+
+}
+
+/* MOVIMIENTOS HORIZONTALES IZQUIERDA A DERECHA */
+
+@keyframes move10 {
+  0% {
+    right: 0;
+  }
+
+  50% {
+    right: 38%;
+    bottom: 0%;
+  }
+
+  100% {
+    right: 38%;
+    bottom: 415%;
+  }
+}
+
+@keyframes move11 {
+  0% {
+    right: 0%;
+  }
+
+  50% {
+    right: 45%;
+  }
+
+  100% {
+    right: 90%;
+  }
+}
+
+@keyframes move12 {
+  0% {
+    right: 0%;
+  }
+
+  40% {
+    right: 38%;
+    top: 0%;
+  }
+
+  50% {
+    right: 42%
+  }
+
+  55% {
+    right: 44%;
+    top: 20%;
+  }
+
+  60% {
+    right: 46%;
+    top: 40%;
+  }
+
+  65% {
+    right: 48%;
+    top: 60%;
+  }
+
+  70% {
+    right: 48%;
+    top: 80%;
+  }
+
+  75% {
+    right: 48%;
+    top: 100%;
+  }
+
+  100% {
+    right: 48%;
+    top: 480%;
+  }
+
+}
+
+
+
 
 /* .delimitor-1 {
   grid-column: 3 / 4;

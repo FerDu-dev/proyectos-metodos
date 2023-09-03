@@ -34,9 +34,11 @@ export function Semaforo ({ id, ActivationSignal }) {
   useEffect(() => {
     currentColor()
   }, [ActivationSignal])
+
   return (
-    <div className=''>
+    <div className='semaforo'>
       <box-icon type='solid' name='traffic' color={color} />
+      {id}
     </div>
   )
 }

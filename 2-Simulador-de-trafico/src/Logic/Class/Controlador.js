@@ -59,6 +59,18 @@ export class ControladorCompuesto {
     return time
   }
 
+  /*
+  time {
+    cicle1: 16,
+    tr1: 19,
+    cicle2: 28,
+    tr2: 31
+    cicle3: 36,
+    tr3: 39,
+    cicle4: 48,
+    tr4: 51
+  }
+*/
   // El objeto conditions tendra la siguiente forma
   // donde cada arreglo interno representa tiempos en segundos [0][0] el tiempo verde de frente y [0][1] el tiempo verde de izquierda  para los semaforos 1 y 3
   // y [1][0] el tiempo verde de frente y [1][1] el tiempo verde de izquierda para los semaforos 2 y 4

@@ -1,26 +1,82 @@
-import { useState, useEffect } from 'react'
+import 'boxicons'
+import { useState, useEffect, useContext } from 'react'
+import { SimulationContext } from '../context/Simulation'
+export function Carro ({ id, permisos }) {
+  const [animation, setAnimation] = useState('auto')
+  const [startAnimation, setStartAnimation] = useState(false)
+  const { start } = useContext(SimulationContext)
 
-export default function Carro ({ ruta, velocidad, simulacionEnEjecucion }) {
-  const [posicion, setPosicion] = useState(0)
+  const randomAnimation = () => {
+    const posibleAnimation = []
+    if (start) {
+      switch (id) {
+        case 1:
+          if (permisos.cicle1 === true) {
+            posibleAnimation.push('auto vertical-1')
+            posibleAnimation.push('auto vertical-2')
+          } else if (permisos.cicle3 === true) {
+            posibleAnimation.push('auto vertical-3')
+          } else {
+            posibleAnimation.push('auto')
+          }
+          break
+        case 4:
+          if (permisos.cicle2 === true) {
+            posibleAnimation.push('auto horizontal-1')
+            posibleAnimation.push('auto horizontal-2')
+          } else if (permisos.cicle4 === true) {
+            posibleAnimation.push('auto horizontal-3')
+          } else {
+            posibleAnimation.push('auto')
+          }
+
+          break
+        case 3:
+          if (permisos.cicle1 === true) {
+            posibleAnimation.push('auto vertical-4')
+            posibleAnimation.push('auto vertical-5')
+          } else if (permisos.cicle3 === true) {
+            posibleAnimation.push('auto vertical-6')
+          } else {
+            posibleAnimation.push('auto')
+          }
+          break
+        case 2:
+          if (permisos.cicle2 === true) {
+            posibleAnimation.push('auto horizontal-4')
+            posibleAnimation.push('auto horizontal-5')
+          } else if (permisos.cicle4 === true) {
+            posibleAnimation.push('auto horizontal-6')
+          } else {
+            posibleAnimation.push('auto')
+          }
+
+          break
+        default:
+          break
+      }
+    } else {
+      posibleAnimation.push('auto')
+    }
+    return posibleAnimation[Math.floor(Math.random() * posibleAnimation.length)]
+  }
+
+  const animationStart = () => {
+    setStartAnimation(true)
+  }
+
+  const animationEnd = () => {
+    setStartAnimation(false)
+  }
 
   useEffect(() => {
-    if (simulacionEnEjecucion) {
-      const intervalo = setInterval(() => {
-        setPosicion((posicion) => (posicion + velocidad) % ruta.length)
-      }, 1000)
-      return () => clearInterval(intervalo)
-    } else {
-      setPosicion(0)
+    if (startAnimation === false && start === true) {
+      setAnimation(randomAnimation())
     }
-  }, [ruta, velocidad, simulacionEnEjecucion])
-
+  }, [permisos])
   return (
-    <div
-      className='carro'
-      style={{
-        left: ruta[posicion].x,
-        top: ruta[posicion].y
-      }}
-    />
+    <div className={animation} onAnimationStart={animationStart} onAnimationEnd={animationEnd}>
+      <box-icon type='solid' name='car' color='orange' />
+    </div>
   )
 }
