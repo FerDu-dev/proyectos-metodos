@@ -1,38 +1,32 @@
-import { useState, useEffect } from 'react';
-import CuatroSemaforos from './components/CuatroSemaforos';
-import DosSemaforos from './components/DosSemaforos';
+import './App.css'
+import { useContext, useEffect } from 'react'
+import { SimulationContext } from './context/Simulation'
+import { Container } from './components/Container'
 
-function App() {
-  const [simulacionEnEjecucion, setSimulacionEnEjecucion] = useState(false);
-  const [tiempoTranscurrido, setTiempoTranscurrido] = useState(0);
+function App () {
+  const { setTime, start, setStart } = useContext(SimulationContext)
+
+  const toggleSimulation = () => {
+    setStart(!start)
+  }
 
   useEffect(() => {
-    if (simulacionEnEjecucion) {
-      const intervalo = setInterval(() => {
-        setTiempoTranscurrido((tiempo) => tiempo + 1);
-      }, 1000);
-      return () => clearInterval(intervalo);
+    if (start) {
+      const interval = setInterval(() => {
+        setTime(time => time + 1)
+      }, 1000)
+      return () => clearInterval(interval)
     }
-  }, [simulacionEnEjecucion]);
-
-  const manejarClicSimulacion = () => {
-    setSimulacionEnEjecucion((enEjecucion) => !enEjecucion);
-    setTiempoTranscurrido(0);
-  };
+  }, [start])
 
   return (
-    <main className="app">
-      <button onClick={manejarClicSimulacion}>
-        {simulacionEnEjecucion ? 'Detener' : 'Iniciar'} simulación
+    <main className='app'>
+      <Container />
+      <button onClick={toggleSimulation}>
+        {start ? 'Detener' : 'Comenzar'} simulación
       </button>
-      <div>Tiempo transcurrido: {tiempoTranscurrido} segundos</div>
-      <div className="contenedor-simulaciones">
-        <CuatroSemaforos simulacionEnEjecucion={simulacionEnEjecucion} />
-        {/* <DosSemaforos /> */}
-      </div>
     </main>
-  );
+  )
 }
 
-export default App;
-
+export default App

@@ -12,4 +12,4 @@ const interseccion1 = new InterseccionCompuesta([[semaforo1, semaforo3], [semafo
 const controlador = new ControladorCompuesto(interseccion1)
 controlador.sincronizarSemaforos([[16, 8], [12, 6]])
 
-export {controlador}
+export { controlador }

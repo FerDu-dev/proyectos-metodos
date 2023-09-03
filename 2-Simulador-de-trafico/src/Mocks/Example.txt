@@ -1,0 +1,30 @@
+const example = [
+  [
+    SemaforoCompuesto {
+      estado: [ 'rojo', 'amarillo', 'verde' ],
+      estadoActivo: 0,
+      tiempoDeCambio: [ 15, 3, 16 ],
+      tiempoDeCambioIzq: [ 9, 3, 8 ]
+    },
+    SemaforoCompuesto {
+      estado: [ 'rojo', 'amarillo', 'verde' ],
+      estadoActivo: 0,
+      tiempoDeCambio: [ 15, 3, 16 ],
+      tiempoDeCambioIzq: [ 9, 3, 8 ]
+    }
+  ],
+  [
+    SemaforoCompuesto {
+      estado: [ 'rojo', 'amarillo', 'verde' ],
+      estadoActivo: 0,
+      tiempoDeCambio: [ 19, 3, 12 ],
+      tiempoDeCambioIzq: [ 11, 3, 6 ]
+    },
+    SemaforoCompuesto {
+      estado: [ 'rojo', 'amarillo', 'verde' ],
+      estadoActivo: 0,
+      tiempoDeCambio: [ 19, 3, 12 ],
+      tiempoDeCambioIzq: [ 11, 3, 6 ]
+    }
+  ]
+]

@@ -1,0 +1,133 @@
+:root {
+  --green-bg-color: #77dd77;
+  --white-bd-color: rgb(211, 203, 203);
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  height: 50vh;
+  width: 50vh;
+  background-color: #554f4f;
+}
+
+.container-1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: var(--green-bg-color);
+}
+
+.container-2 {
+  grid-column: 4 / 6;
+  grid-row: 1 / 3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-color: var(--green-bg-color);
+}
+
+.container-3 {
+  grid-column: 1 / 3;
+  grid-row: 4 / 6;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-color: var(--green-bg-color);
+}
+
+.container-4 {
+  grid-column: 4/ 6;
+  grid-row: 4 / 6;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: var(--green-bg-color);
+}
+
+.calle-1 {
+  grid-column: 1/6;
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.subcalle1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px dashed var(--white-bd-color);
+}
+
+.subcalle2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.calle-2 {
+  grid-column: 3/4;
+  grid-row: 1/6;
+  display: flex;
+}
+
+.calle-2 .subcalle1 {
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: none;
+}
+
+.calle-2 .subcalle2 {
+  border-left: 1px dashed var(--white-bd-color);
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+
+
+}
+
+/* .delimitor-1 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+  margin-left: 50%;
+  width: 1px;
+  border: 2.5px dashed #ffffff;
+  height: 98%;
+  background-repeat: space;
+}
+
+.delimitor-2 {
+  grid-column: 3 / 4;
+  grid-row: 4 / 6;
+  margin-left: 50%;
+  width: 1px;
+  border: 2.5px dashed #ffffff;
+  height: 98%;
+  background-repeat: space;
+}
+
+.delimitor-3 {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  margin-top: 25%;
+  height: 1px;
+  border: 2.5px dashed #ffffff;
+  width: 98%;
+  background-repeat: space;
+}
+
+.delimitor-4 {
+  grid-column: 4 / 6;
+  grid-row: 3 / 4;
+  margin-top: 25%;
+  height: 1px;
+  border: 2.5px dashed #ffffff;
+  width: 98%;
+  background-repeat: space;
+} */

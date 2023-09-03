@@ -35,6 +35,30 @@ export class ControladorCompuesto {
     this.sync(conditions)
   }
 
+  totalCicleTime () {
+    let time = 0
+    time += this.semaforos[1][0].tiempoDeCambio[2]
+    time += this.semaforos[0][0].tiempoDeCambio[2]
+    time += this.semaforos[1][0].tiempoDeCambioIzq[2]
+    time += this.semaforos[0][0].tiempoDeCambioIzq[2]
+    time += TIEMPO_AMARILLO
+    return time
+  }
+
+  timesOfCicle () {
+    const time = {
+      cicle1: this.semaforos[1][0].tiempoDeCambio[2],
+      tr1: this.semaforos[1][0].tiempoDeCambio[2] + TIEMPO_AMARILLO,
+      cicle2: this.semaforos[1][0].tiempoDeCambio[2] + this.semaforos[0][0].tiempoDeCambio[2],
+      tr2: this.semaforos[1][0].tiempoDeCambio[2] + this.semaforos[0][0].tiempoDeCambio[2] + TIEMPO_AMARILLO,
+      cicle3: this.semaforos[1][0].tiempoDeCambio[2] + this.semaforos[0][0].tiempoDeCambio[2] + this.semaforos[1][0].tiempoDeCambioIzq[2],
+      tr3: this.semaforos[1][0].tiempoDeCambio[2] + this.semaforos[0][0].tiempoDeCambio[2] + this.semaforos[1][0].tiempoDeCambioIzq[2] + TIEMPO_AMARILLO,
+      cicle4: this.semaforos[1][0].tiempoDeCambio[2] + this.semaforos[0][0].tiempoDeCambio[2] + this.semaforos[1][0].tiempoDeCambioIzq[2] + this.semaforos[0][0].tiempoDeCambioIzq[2],
+      tr4: this.semaforos[1][0].tiempoDeCambio[2] + this.semaforos[0][0].tiempoDeCambio[2] + this.semaforos[1][0].tiempoDeCambioIzq[2] + this.semaforos[0][0].tiempoDeCambioIzq[2] + TIEMPO_AMARILLO
+    }
+    return time
+  }
+
   // El objeto conditions tendra la siguiente forma
   // donde cada arreglo interno representa tiempos en segundos [0][0] el tiempo verde de frente y [0][1] el tiempo verde de izquierda  para los semaforos 1 y 3
   // y [1][0] el tiempo verde de frente y [1][1] el tiempo verde de izquierda para los semaforos 2 y 4
