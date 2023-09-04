@@ -4,6 +4,8 @@
   --animation-time: 3s;
 }
 
+
+
 .main-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -11,6 +13,9 @@
   height: 50vh;
   width: 50vh;
   background-color: #554f4f;
+  border: solid black 4px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  
 }
 
 .container-1 {
