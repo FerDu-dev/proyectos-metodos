@@ -27,16 +27,16 @@ function App () {
         <button className='button-56' onClick={toggleSimulation}>
           {start ? 'Detener' : 'Comenzar'} simulación
         </button>
-        </div>
-        <div className='integrantes'>
-          <p>Santiago Briceño 28.063.634</p>
-          <p>César Pausín 28.402.367</p>
-          <p>Fernando Duno 27.173.917</p>
-          <p>José Quintero 27.657.168</p>
-          <p>Sofía Tamaris 30.053.436</p>
+      </div>
+      <div className='integrantes'>
+        <p>Santiago Briceño 28.063.634</p>
+        <p>César Pausín 28.402.367</p>
+        <p>Fernando Duno 27.173.917</p>
+        <p>José Quintero 27.657.168</p>
+        <p>Sofía Tamaris 30.053.436</p>
       </div>
     </main>
-    
+
   )
 }
 
