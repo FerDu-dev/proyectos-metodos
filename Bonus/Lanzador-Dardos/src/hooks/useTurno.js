@@ -11,6 +11,7 @@ export const useTurno = () => {
   const [y, setY] = useState(0)
   const [puntActual, setPuntaje] = useState(null)
   const [inicio, setInicio] = useState(false)
+  const [puntuaciones, setPuntuaciones] = useState([]);
 
   const player1 = useRef(0)
   const player2 = useRef(0)
@@ -24,27 +25,34 @@ export const useTurno = () => {
 
   // problema de render
   const toggleTurno = () => {
-    const simulationResult = simularLanzamiento()
-    setX(simulationResult.x)
-    setY(simulationResult.y)
-    console.log(turno)
-
-    setPuntaje(simulationResult.puntaje)
-
+    const simulationResult = simularLanzamiento();
+    setX(simulationResult.x);
+    setY(simulationResult.y);
+  
+    setPuntaje(simulationResult.puntaje);
+  
     // acumulado de puntos del jugador del turno actual
-    const acumulado = turno ? player1.current += puntActual : player2.current += puntActual
-
-    console.log(`puntaje de ${turno ? JUGADORES[0] : JUGADORES[1]} es ${acumulado}`)
-
-    winnerCondition(acumulado)
-
-    const nextTurn = !turno
-    setTurno(!turno)
-    console.log(nextTurn)
+    const acumulado = turno
+      ? (player1.current += puntActual)
+      : (player2.current += puntActual);
+  
+    winnerCondition(acumulado);
+  
+    // Actualizar el estado de puntuaciones
+    setPuntuaciones((prevPuntuaciones) => [
+      ...prevPuntuaciones,
+      {
+        [JUGADORES[0]]: turno ? puntActual : 0,
+        [JUGADORES[1]]: !turno ? puntActual : 0,
+      },
+    ]);
+  
+    const nextTurn = !turno;
+    setTurno(!turno);
     if (!inicio) {
-      setInicio(true)
+      setInicio(true);
     }
-  }
+  };
 
   const resetGame = () => {
     player1.current = 0

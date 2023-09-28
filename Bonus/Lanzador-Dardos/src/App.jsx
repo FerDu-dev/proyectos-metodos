@@ -3,12 +3,13 @@ import { Tablero } from './components/Tablero'
 import { useTurno } from './hooks/useTurno'
 import { JUGADORES } from './CONSTANTS/constants'
 import { WinnerModal } from './components/WinnerModal'
+import { TablaPuntuacion } from './components/TablaPuntuacion'
 
 // TURNO JUGADOR 1 TRUE
 // TURNO JUGADOR 2 FALSE
 
 function App () {
-  const { turno, winner, x, y, puntActual, toggleTurno, player1, player2, inicio, resetGame } = useTurno()
+  const { turno, winner, x, y, puntActual, toggleTurno, player1, player2, inicio, resetGame, puntuaciones } = useTurno()
   return (
     <>
       <section className='container'>
@@ -28,6 +29,7 @@ function App () {
             <p>{`${JUGADORES[1]} : ${player2.current}`}</p>
           </div>
         </div>
+        {/* <TablaPuntuacion jugadores={JUGADORES} puntuaciones={puntuaciones} /> */}
       </section>
       {winner && <WinnerModal winner={winner} resetGame={resetGame} />}
     </>

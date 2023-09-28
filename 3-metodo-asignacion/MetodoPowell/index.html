@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Optimización de costos</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <script src="https://unpkg.com/mathjs/lib/browser/math.js"></script>
+</head>
+    <body>
+        <h1>Optimización de costos</h1>
+        <form id="optimizationForm">
+            <label for="costs">Costos de los productos:</label><br>
+            <input type="text" id="costs" name="costs"><br>
+            <label for="requirements">Requerimientos de materia prima por producto:</label><br>
+            <input type="text" id="requirements" name="requirements"><br>
+            <label for="availability">Disponibilidad total de materia prima:</label><br>
+            <input type="text" id="availability" name="availability"><br>
+            <input type="submit" value="Calcular">
+        </form>
+
+        <div id="result"></div>
+
+        
+        <script type="module" src="./script.js"></script> 
+    </body>
+</html>
+
+
