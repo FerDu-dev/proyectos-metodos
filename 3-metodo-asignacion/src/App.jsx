@@ -1,34 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Matriz from './components/Matriz'
+import Enunciado from './components/Enunciado'
+import { resultMatriz, originalMatriz, asignacion } from '../Logic/Asignation-Method-def.js'
+import Solution from './components/Solution'
 
-function App() {
-  const [count, setCount] = useState(0)
+// ORDENAR EL OBJETO DE ASIGNACION POR EL VALOR DE LA CLAVE FILA
+const ordenado = asignacion.sort((a, b) => a.fila - b.fila)
+console.log(ordenado)
 
+function App () {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <main>
+      <Enunciado />
+      <div className='container'>
+        <div>
+          <Matriz matriz={originalMatriz} title='MATRIZ ORIGINAL' />
+        </div>
+        <div className='process'>
+          <h1>👓</h1>
+          <h1>METODO HÚNGARO</h1>
+          <h1>👓</h1>
+        </div>
+        <div>
+          <Matriz matriz={resultMatriz} title='MATRIZ SOLUCION' />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <Solution asignation={ordenado} />
+    </main>
   )
 }
 

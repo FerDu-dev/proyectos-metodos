@@ -1,0 +1,12 @@
+p{
+  text-align: justify;
+}
+
+.container-enunciado{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}

@@ -1,0 +1,30 @@
+/* ESTILOS DE LA TABLA QUE REPRESENTA LA MATRIZ */
+.matriz-table{
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    border: 1px solid #ffffff;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.matriz-table td{
+    border: 1px solid #ffffff;
+    padding: 0.5rem;
+}
+
+.matriz-table th{
+    border: 1px solid #ffffff;
+    padding: 0.5rem;
+}
+
+.title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+
+/* Path: 3-metodo-asignacion/src/components/Tabla.css */

@@ -1,0 +1,21 @@
+.solution-table{
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 70%;
+    height: 70%;
+    border: 1px solid #ffffff;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.solution-table td{
+    border: 1px solid #ffffff;
+    width: 10%;
+    height: 10%;
+    padding: 0.5rem;
+}
+
+.solution-table th{
+    border: 1px solid #ffffff;
+    padding: 0.5rem;
+}

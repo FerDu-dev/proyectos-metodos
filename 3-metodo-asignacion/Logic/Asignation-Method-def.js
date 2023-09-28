@@ -8,6 +8,14 @@ const MATRIZ = new Matriz([
   [6, 9, 9, 10, 5]
 ])
 
+const originalMatriz = [
+  [5, 8, 5, 9, 7],
+  [7, 2, 3, 6, 8],
+  [9, 10, 8, 9, 8],
+  [8, 7, 9, 7, 8],
+  [6, 9, 9, 10, 5]
+]
+
 const asignacion = []
 
 console.log(MATRIZ.toString())
@@ -20,13 +28,17 @@ console.log('El elemento mayor de la matriz es: ', mayorElem)
 MATRIZ.restarElementosPorElMayor()
 console.log('Matriz con elementos restados por el mayor: \n', MATRIZ.toString())
 
-// PASO 3: RESTAR EL MENOR DE CADA FILA A CADA ELEMENTO DE LA COLUMNA CORRESPONDIENTE
+// PASO 3: RESTAR EL MENOR DE CADA COLUMNA A CADA ELEMENTO DE LA COLUMNA CORRESPONDIENTE
 MATRIZ.restarElementosDeCadaColumnaPorElMenor()
 console.log('Matriz con elementos restados por el menor de cada columna: \n', MATRIZ.toString())
 
 // PASO 4: RESTAR EL MENOR DE CADA COLUMNA A CADA ELEMENTO DE LA FILA CORRESPONDIENTE
 MATRIZ.restarElementosDeCadaFilaPorElMenor()
 console.log('Matriz con elementos restados por el menor de cada fila: \n', MATRIZ.toString())
+
+// PASO 5: SE DECLARA EL OBJETO QUE CONTENDRA LAS LINEAS
+// IMAGINARIAS QUE SE DIBUJARAN EN LA MATRIZ PARA ASIGNAR
+// LOS ELEMENTOS CORRESPONDIENTES
 
 let linesCount = 0
 const newLine = {
@@ -40,10 +52,9 @@ const newLine = {
   }
 }
 
-let control = 0
+// PASO 6: SE ITERA HASTA QUE LA CANTIDAD DE LINEAS SEA IGUAL A LA DIMENSION DE LA MATRIZ
 
 while (linesCount < MATRIZ.length) {
-  console.log('ITERACION: ', control)
   const zerosCol = MATRIZ.cantidadDeCerosPorColumna()
   let zerosIndexFil = MATRIZ.indiceDeCerosPorFila()
   for (let i = 0; i < MATRIZ.length; i++) {
@@ -179,8 +190,15 @@ while (linesCount < MATRIZ.length) {
   newLine.filas.elements = []
   newLine.columnas.index = []
   newLine.columnas.elements = []
-  control++
 }
 
 console.log('MATRIZ RESULTANTE: \n', MATRIZ.toString())
 console.log('ASIGNACION: ', asignacion)
+
+const resultMatriz = MATRIZ.clonar()
+
+export {
+  resultMatriz,
+  originalMatriz,
+  asignacion
+}

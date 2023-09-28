@@ -1,26 +1,26 @@
-30% es la distancia del div subcalle al semaforo
-backwards para que se vaya de teniendo
+# MÉTODOS CUANTITATIVOS
 
-VEHICULOS CON LA CLASE auto vertical 1 
-POSIBLE RUTA: 
-  200 px bottom y 200 px left
-  470 px bottom y 0 px left
-  200 px bottom y Se van sumando 5 px en bottom y en right hasta llegar a 250 px bottom y se llega a 250 px right
+Proyecto Simulador de tráfico - Evaluación Nro. 2 
 
+## Descripción de la aplicación
 
-VEHICULOS CON LA CLASE auto vertical 2
-  200px top y 200px right
-  470px top y 0px right
-  200px top y Se van sumando 5 px en top y en left hasta llegar a 250 px top y se llega a 250 px left
+Simulador de tráfico que otorga permiso a una serie de objetos de manera sincronizada
+Que evita las colisiones de los mismos y permite un responsable flujo de datos.
 
+## Getting Started
 
-VEHICULOS CON LA CLASE auto horizontal 1
-  470px left y 0px top
-  200px left y 200px top
-  200px left y Se van sumando 5 px en left y en bottom hasta llegar a 250 px left y se llega a 250 px bottom
+1.- git clone https://github.com/FerDu-dev/proyectos-metodos.git
+2.- npm i - Para la clonación de dependencias.
+3.- cd 2-simulador-de-trafico
+4.- npm run dev - Script de ejecución
+5.- Abrir la ruta indicada por consola.
+# Executing program
 
+1.- Click en el boton para iniciar la simulación
+## Integrantes
 
-VEHICULOS CON LA CLASE auto horizontal 2
-  200px right y 200px bottom
-  470px right y 0px bottom
-  200px right y Se van sumando 5 px en right y en top hasta llegar a 250 px right y se llega a 250 px top
+- Fernando Duno [FernandoD](https://github.com/FerDu-dev)
+- Santiago Briceño [SantiagoBriceño](https://github.com/SantiagoBriceno)
+- Sofia Tamaris [SofiaTamaris](https://github.com/Sofiatamaris)
+- Andres Pausín [AndresPausin](https://github.com/andrespausin)
+- José Miguel Quintero [JoseMQ](https://github.com/Josemq24)
