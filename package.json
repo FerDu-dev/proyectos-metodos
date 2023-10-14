@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ev1" : "node ./1-Balanceador-de-cargas/LoadBalancer/LoadBalancer.js"
+    "ev1": "node ./1-Balanceador-de-cargas/LoadBalancer/LoadBalancer.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,4 @@
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
   }
-  
 }
